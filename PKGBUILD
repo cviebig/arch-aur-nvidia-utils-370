@@ -86,6 +86,8 @@ package_nvidia-utils() {
     optdepends=('nvidia-settings: configuration tool'
                 'xorg-server-devel: nvidia-xconfig'
                 'opencl-nvidia: OpenCL support')
+    provides=('libglvnd')
+    conflicts=('libglvnd')  
     install="${pkgname}.install"
     cd "${_pkg}"
 
